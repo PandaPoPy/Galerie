@@ -4,10 +4,12 @@ require_once('functions.php');
 $dsn=$config['dsn'];
 $user=$config['user'];
 $password=$config['mysql_pwd'];
+
+session_start();
+
 try {
-$db = new PDO($dsn, $user, $password);
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+	$db = new PDO($dsn, $user, $password);
+	$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-die ('Connection failed: ' . $e->getMessage());
+	die ('Connection failed: ' . $e->getMessage());
 }
-?>

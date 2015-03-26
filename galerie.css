@@ -1,0 +1,27 @@
+.gallery {
+    padding: 10px;
+}
+
+.gallery .image {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.gallery .image a {
+    display: block;
+    height: 150px;
+    width: 150px;
+}
+
+.navigation {
+    clear: both;
+    list-style-type: none;
+}
+
+.navigation li {
+    display: inline;
+}
+
